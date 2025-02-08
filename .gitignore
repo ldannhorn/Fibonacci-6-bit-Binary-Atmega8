@@ -1,0 +1,6 @@
+build.bat
+main.elf
+main.hex
+main.o
+upload.bat
+.vscode/

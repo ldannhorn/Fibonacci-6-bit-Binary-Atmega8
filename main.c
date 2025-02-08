@@ -20,21 +20,21 @@ int main()
  
  while (1) {
 	c = a + b;
-	_delay_ms(500);
+	_delay_ms(200);
 	PORTC = 0b0000000;
 	PORTC |= c;
 	
 	//
 	
 	a = b + c;
-	_delay_ms(500);
+	_delay_ms(200);
 	PORTC = 0b0000000;
 	PORTC |= a;
 	
 	//
 	
 	b = c + a;
-	_delay_ms(500);
+	_delay_ms(200);
 	PORTC = 0b0000000;
 	PORTC |= b;
  }

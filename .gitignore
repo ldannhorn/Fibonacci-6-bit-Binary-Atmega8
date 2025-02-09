@@ -1,6 +1,12 @@
 build.bat
+upload.bat
+
 main.elf
 main.hex
 main.o
-upload.bat
+
+button.elf
+button.hex
+button.o
+
 .vscode/

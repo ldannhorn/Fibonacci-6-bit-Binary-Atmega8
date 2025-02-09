@@ -1,5 +1,5 @@
 // This program outputs 8 bits of the fibonacci sequence on port C0-C5 and D6-D7
-// LEDs on PC0-PC5
+// LEDs on PC0-PC5 & D6-D7
 
 #define F_CPU 16000000 
 

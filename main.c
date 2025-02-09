@@ -1,4 +1,4 @@
-// This program outputs 6 bits of the fibonacci sequence on port C
+// This program outputs 8 bits of the fibonacci sequence on port C0-C5 and D6-D7
 // LEDs on PC0-PC5
 
 #define F_CPU 16000000 
@@ -11,6 +11,7 @@ int main()
 {
  // Setup
  DDRC |= 0b00111111; // set PC0-PC5 to output
+ DDRD |= 0b11000000; // set PD6-PD7 to output
 
 
  // Fibonacci
@@ -20,23 +21,29 @@ int main()
  
  while (1) {
 	c = a + b;
-	_delay_ms(75);
+	_delay_ms(150);
 	PORTC = 0b0000000;
 	PORTC |= c;
+	PORTD = 0b0000000;
+	PORTD |= c;
 	
 	//
 	
 	a = b + c;
-	_delay_ms(75);
+	_delay_ms(150);
 	PORTC = 0b0000000;
 	PORTC |= a;
+	PORTD = 0b0000000;
+	PORTD |= a;
 	
 	//
 	
 	b = c + a;
-	_delay_ms(75);
+	_delay_ms(150);
 	PORTC = 0b0000000;
 	PORTC |= b;
+	PORTD = 0b0000000;
+	PORTD |= b;
  }
  
  return 0; // the program executed successfully
